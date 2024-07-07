@@ -20,12 +20,12 @@ public class PlayFoot {
                 homeTeamCSV = "../resources/netherlands.csv";
                 awayTeamCSV = "../resources/england.csv";
             } else {
-                System.out.println("There was a problem loading the teamsheets. Exiting program.");
+                System.out.println("Game shutdown. There was a problem loading the teamsheets.");
                 scanner.close();
                 return;
             }
             
-            System.out.println("Enter the referee's personality setting (between 0 and 100):");
+            System.out.println("How strict is the match referee? (from 0 to 100):");
             int refereePersonality = -1; // Initialize with an invalid value to enter the loop
             while (refereePersonality < 0 || refereePersonality > 100) {
                 try {
@@ -43,12 +43,12 @@ public class PlayFoot {
             try {
                 CLIEngine engine = new CLIEngine(homeTeamCSV, awayTeamCSV, refereePersonality);
                 engine.start();
-                System.out.println("Engine started with home team: " + homeTeam + ", referee's personality: " + refereePersonality);
+                System.out.println("Engine started with home team as: " + homeTeam + ", referee discipline: " + refereePersonality);
             } catch (Exception e) {
                 System.out.println("An error occurred: " + e.getMessage());
             }
         } else {
-            System.out.println("Ok then. Kick off abandoned! See you next time.");
+            System.out.println("Ok then. Match abandoned! See you next time.");
         }
         
         scanner.close();
