@@ -24,6 +24,8 @@ Just run PlayFoot at the command line
 
 The app will ask you to choose a home team and set the referee's personality, then it will kick off the main events of the game and print the final result and total of red cards for each team, as well saving those events to a match_results.csv file if you want to test the influence of match variables in your own time.
 
+testing URL change
+
 ## Testing
 
 I'm testing match variables to choose the best/most realistic way to extend new features. If you want to bulk test variables yourself, there are separate apps to play out the influence of average age and home team support in the `enginetest` folder.
